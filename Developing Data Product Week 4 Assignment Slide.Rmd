@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Coursera Reproducible Pitch
 
-This is a task for the data science coursera course about developing data products for week 4. As part of this, I have created a shiny app and deployed it on the shiny server. The link is https://ngiampy88.shinyapps.io/MyShinyApp/. The code can be found at 
+This is a task for the data science coursera course about developing data products for week 4. As part of this, I have created a shiny app and deployed it on the shiny server. The link is https://ngiampy88.shinyapps.io/MyShinyApp/. The code can be found at https://github.com/NgiamPeiYee/MyShinyApp.git
 
 ## Application Overview
 
@@ -32,4 +32,4 @@ The shiny app plots graph against miles per gallon (mpg) for different variables
 
 Use the Shiny app at https://ngiampy88.shinyapps.io/MyShinyApp/
 
-Get the app source code at 
+Get the app source code at https://github.com/NgiamPeiYee/MyShinyApp.git

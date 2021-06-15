@@ -28,6 +28,27 @@ The shiny app plots graph against miles per gallon (mpg) for different variables
 - Click the dropdown list to choose the variable you would like to plot against mpg
 - Output: Plot of the requested variable against mpg
 
+## Snippets of R code
+
+library(shiny)
+
+library(plotly)
+
+Data <- mtcars
+
+Data $am <- factor(Data $am, labels = c("Automatic", "Manual"))
+
+shinyServer(function(input, output) {
+
+  formulaText <- reactive({ paste("mpg vs ", input$variable) })
+  
+  output$caption <- renderText({formulaText()})
+  
+  output $mpgPlot <- renderPlot({ ggplot(Data, aes_string(y=input $variable, x="mpg")) + geom_point() })
+  
+})
+
+
 ## Ready to give it a try?
 
 Use the Shiny app at https://ngiampy88.shinyapps.io/MyShinyApp/

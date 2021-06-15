@@ -3147,6 +3147,26 @@ slide:not(.current) .plotly.html-widget{
 <li>Output: Plot of the requested variable against mpg</li>
 </ul>
 
+</article></slide><slide class=""><hgroup><h2>Snippets of R code</h2></hgroup><article  id="snippets-of-r-code">
+
+<p>library(shiny)</p>
+
+<p>library(plotly)</p>
+
+<p>Data &lt;- mtcars</p>
+
+<p>Data $am &lt;- factor(Data $am, labels = c(&ldquo;Automatic&rdquo;, &ldquo;Manual&rdquo;))</p>
+
+<p>shinyServer(function(input, output) {</p>
+
+<p>formulaText &lt;- reactive({ paste(&ldquo;mpg vs&rdquo;, input$variable) })</p>
+
+<p>output$caption &lt;- renderText({formulaText()})</p>
+
+<p>output $mpgPlot &lt;- renderPlot({ ggplot(Data, aes_string(y=input $variable, x=&ldquo;mpg&rdquo;)) + geom_point() })</p>
+
+<p>})</p>
+
 </article></slide><slide class=""><hgroup><h2>Ready to give it a try?</h2></hgroup><article  id="ready-to-give-it-a-try">
 
 <p>Use the Shiny app at <a href='https://ngiampy88.shinyapps.io/MyShinyApp/' title=''>https://ngiampy88.shinyapps.io/MyShinyApp/</a></p>

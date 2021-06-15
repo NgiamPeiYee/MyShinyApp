@@ -13,7 +13,7 @@ library(shiny)
 shinyUI(fluidPage(
 
     # Application title
-    titlePanel("Miles per Gallon"),
+    titlePanel("This app aims to plot the different variables against miles per gallon (mpg). Please choose the variable you would like to plot below."),
    
     sidebarPanel(
       
